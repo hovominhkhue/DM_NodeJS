@@ -7,7 +7,7 @@ const __dirname = url.fileURLToPath(new URL('.', import.meta.url));
 async function calculateSalesTotal(salesFiles) {
   let salesTotal = 0;
 
-  for (file of salesFiles) {
+  for (const file of salesFiles) {
     const data = JSON.parse(await fs.readFile(file));
 
     salesTotal += data.total;
