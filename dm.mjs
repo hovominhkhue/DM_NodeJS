@@ -1,4 +1,4 @@
-import {promises as fs} from fs; //changement de CJS à ESM const fs = require("fs").promises;
+import {promises as fs} from "fs"; //changement de CJS à ESM const fs = require("fs").promises;
 import path from "path"; //import path
 import * as url from 'url'; //import url pour déclaration __dirname
 
