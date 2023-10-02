@@ -1,8 +1,8 @@
 import {promises as fs} from "fs"; //changement de CJS à ESM const fs = require("fs").promises;
-import path from "path"; //import path
-import * as url from 'url'; //import url pour déclaration __dirname
+import path, { dirname } from "path"; //import path
+import { fileURLToPath } from "url";
 
-const __dirname = url.fileURLToPath(new URL('.', import.meta.url));
+const __dirname = dirname(fileURLToPath(import.meta.url));
 
 async function calculateSalesTotal(salesFiles) {
   let salesTotal = 0;
